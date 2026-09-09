@@ -10,7 +10,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
@@ -147,7 +147,10 @@ print("\n[7] Creating numerical preprocessing pipeline...")
 numerical_pipeline = Pipeline(
     steps=[
         # Replace missing numerical values with median
-        ("imputer", SimpleImputer(strategy="median"))
+        ("imputer", SimpleImputer(strategy="median")),
+
+        # Normalize numerical features
+        ("scaler", StandardScaler())
     ]
 )
 
