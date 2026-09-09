@@ -14,3 +14,8 @@ This project demonstrates a basic MLOps version control workflow using Git, GitH
 
 ```bash
 pip install -r requirements.txt
+
+## Run Training
+
+```bash
+python src/train_l232598_final.py
