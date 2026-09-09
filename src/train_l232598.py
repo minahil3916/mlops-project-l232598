@@ -26,7 +26,7 @@ MODEL_PATH = f"model/house_price_model_{STUDENT_ID}.pkl"
 TARGET_COLUMN = "Price"
 TEST_SIZE = 0.20
 RANDOM_STATE = 42
-
+LEARNING_RATE = 0.01
 
 #---------------------------------------------------------------
 # # 2. LOAD DATASET
